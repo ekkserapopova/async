@@ -12,7 +12,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-const password = "documents_for_change" //какой-то пароль, вероятно каневский токен
+const password = "documents_for_change"
 
 func StartServer() {
 	log.Println("Server start up")
@@ -24,7 +24,7 @@ func StartServer() {
 		})
 	})
 
-	router.POST("/name", func(c *gin.Context) { //переделать на мфц
+	router.POST("/name", func(c *gin.Context) {
 		var data NameData
 
 		if err := c.ShouldBindJSON(&data); err != nil {
