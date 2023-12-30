@@ -24,7 +24,7 @@ func StartServer() {
 		})
 	})
 
-	router.POST("/name", func(c *gin.Context) {
+	router.POST("/mfc", func(c *gin.Context) {
 		var data NameData
 
 		if err := c.ShouldBindJSON(&data); err != nil {
